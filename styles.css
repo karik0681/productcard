@@ -102,3 +102,31 @@
     background-position: 85px 0px;
     background-repeat: no-repeat;
 }
+
+.container-button {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button-design {
+    padding: 10px 15px;
+    background-color: #515076;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.bg-yellow {
+    background-color: yellow;
+}
+
+.bg-green {
+    background-color: green;
+}
