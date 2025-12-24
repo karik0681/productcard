@@ -49,14 +49,14 @@ function outputConsoleLog(message) {
 const changeColorButton = document.querySelector('#change-color-button')
 
 changeColorButton.addEventListener('click', () => {
-    changeColorButton.classList.toggle('color-green')
-    changeColorButton.classList.toggle('color-yellow')
+    changeColorButton.classList.toggle('bg-green')
+    changeColorButton.classList.toggle('bg-yellow')
 })
 
 // Наведение на заголовок //
 
 const pageTitle = document.querySelector('.page-title')
 pageTitle.addEventListener('mouseover' , () => {
-  console.log('Вы навели на заголовок')
+  console.log(pageTitle.textContent)
 })
  
