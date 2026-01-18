@@ -2,9 +2,9 @@
 function showTemperature(city, temperature) {
     console.log(`Температура в ${city} составляет ${temperature}°C`);
 }
-showTemperature('Москва', 20);
+showTemperature('МОСКВА:', 20);
 
-// Скорость света в вакууме
+// Скорость света
 const speedOfLight = 299792458;
 function checkSpeedOfLight(speed) {
     if (speed === speedOfLight) {
@@ -22,7 +22,7 @@ checkSpeedOfLight(250000000);
 // Бюджет на покупку техники
 const product  = 'ноутбук';
 const devicePrice = 1200;
-function canPurchaseDevice(budget) {
+function PurchaseDevice(budget) {
 
     if (budget >= devicePrice) {
         console.log(`Ваш ${product} куплен.  Спасибо за покупку!`);
@@ -32,8 +32,8 @@ function canPurchaseDevice(budget) {
 
     }
 }
-canPurchaseDevice(800);
-canPurchaseDevice(1200);
+PurchaseDevice(800);
+PurchaseDevice(1200);
 
 
 // Длина строки
