@@ -23,28 +23,25 @@ const car = {
     transmission: 'Automatic',
     color: 'White',
     mileage: 15000,
-    owner: {
-        firstName: myInfo.firstName,
-        lastName: myInfo.lastName,
-     }
+    owner: myInfo
 };
 
 console.log(car);
 
 // функция из объекта car которая будет проверять есть ли в свойстве максимальная скорость если нет то добавлять его со значением 200 если есть то ничего не делать.
-car.checkMaxSpeed = function() {
-    if (!this.maxSpeed) {
-        this.maxSpeed = 200;
+function checkAndAddMaxSpeed(carObj) {
+    if (!carObj.hasOwnProperty('maxSpeed')) {
+        carObj.maxSpeed = 200;
     }
-};
-car.checkMaxSpeed();
+}
+checkAndAddMaxSpeed(car);
 console.log(car);
 
 // Функция с аргументом объект и второй аргумент свойство объекта затем нужно вывести ее значение в консоль.
-function displayBrand(obj, prop) {
+function showProperty(obj, prop) {
     console.log(obj[prop]);
 }
-displayBrand(car, 'brand');
+showProperty(car, 'brand');
 
 // Массив который содержит название продуктов просто строки.
 const products = ['Laptop', 'Smartphone', 'Tablet', 'Headphones', 'Smartwatch'];
@@ -102,10 +99,6 @@ console.log(combinedBooks);
 
 // Функция которая принимает массив из combinedBooks и добавляет новое свойство isRare со значением true если год издания книги после 2000 года и false если до.
 function markRareBooks(bookArray) {
-    bookArray.map(book => {
-        book.isRare = book.year > 2000 ? true : false;
-        return book;
-    });
-}
-markRareBooks(combinedBooks);
-console.log(combinedBooks);
+    return  bookArray.map(book => ({ ...book, isRare: book.year > 2000 }));
+} 
+console.log(markRareBooks(combinedBooks));
