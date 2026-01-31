@@ -23,8 +23,8 @@ const car = {
     transmission: 'Automatic',
     color: 'White',
     mileage: 15000,
-    owner: myInfo
 };
+car.owner = myInfo
 
 console.log(car);
 
@@ -38,10 +38,10 @@ checkAndAddMaxSpeed(car);
 console.log(car);
 
 // Функция с аргументом объект и второй аргумент свойство объекта затем нужно вывести ее значение в консоль.
-function showProperty(obj, prop) {
+function showCarInfo(obj, prop) {
     console.log(obj[prop]);
 }
-showProperty(car, 'brand');
+showCarInfo(car, 'brand');
 
 // Массив который содержит название продуктов просто строки.
 const products = ['Laptop', 'Smartphone', 'Tablet', 'Headphones', 'Smartwatch'];
@@ -99,6 +99,11 @@ console.log(combinedBooks);
 
 // Функция которая принимает массив из combinedBooks и добавляет новое свойство isRare со значением true если год издания книги после 2000 года и false если до.
 function markRareBooks(bookArray) {
-    return  bookArray.map(book => ({ ...book, isRare: book.year > 2000 }));
-} 
-console.log(markRareBooks(combinedBooks));
+    return  bookArray.map(book => ({
+         ...book,
+         isRare: book.year > 2000
+         }));
+}
+markRareBooks(combinedBooks);
+
+console.log(combinedBooks);
