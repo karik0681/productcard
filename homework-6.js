@@ -8,7 +8,7 @@ const myInfo = {
     city: 'Almaty',
     country: 'Kazakhstan',
     email: 'kairat.ivanov@example.com',
-    work : 'Software Engineer',
+    work: 'Software Engineer',
     company: 'Tech Solutions'
 };
 
@@ -99,10 +99,10 @@ console.log(combinedBooks);
 
 // Функция которая принимает массив из combinedBooks и добавляет новое свойство isRare со значением true если год издания книги после 2000 года и false если до.
 function markRareBooks(bookArray) {
-    return  bookArray.map(book => ({
-         ...book,
-         isRare: book.year > 2000
-         }));
+    return bookArray.map(book => ({
+        ...book,
+        isRare: book.year > 2000
+    }));
 }
 markRareBooks(combinedBooks);
 
