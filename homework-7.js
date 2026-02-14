@@ -59,7 +59,7 @@ console.log(emailsWithReduce);
 const emailsWithMap = usersComments.map(comment => comment.email);
 console.log(emailsWithMap); 
 
-// 12 - Перебрать массив с задания №11, привести его к строке. // С помощью метода toString и join
+// 12 - Перебрать массив с задания №11, привести его к строке. //
 
 const emailsAsString = emails.toString();
 const emailsString  = emails.join();
