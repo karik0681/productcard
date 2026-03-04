@@ -2,17 +2,17 @@ import { products } from './products.js';
 
 // 1. Создаем объект описаний через reduce
 const productDescriptions = products.reduce((acc, product) => {
-  acc[product.name] = product.description;
+  acc.push({ [product.name]: product.description });
   return acc;
-}, {});
+}, []);
 
 // 2. Функция получения числа карточек от пользователя с валидацией
 function getCardCount() {
   const input = prompt('Сколько карточек нужно отобразить? (от 1 до 5)');
   const cardCount = parseInt(input);
 
-  if (isNaN(cardCount) || cardCount < 1 || cardCount > 5) {
-    alert('Пожалуйста, введите число от 1 до 5.');
+  if (isNaN(cardCount) || cardCount < 1 || cardCount > products.length) {
+    alert(`Пожалуйста, введите число от 1 до ${products.length}.`);
     return getCardCount();
   }
   return cardCount;
@@ -30,7 +30,7 @@ function renderCards(productsArray) {
 
     const card = template.cloneNode(true);
     const img = card.querySelector('.js-product-img');
-    if (img) img.src = product.image;
+    if (img) img.src = `./images/${product.image}.png`;
 
     const title = card.querySelector('.js-product-name');
     if (title) title.textContent = product.name;
@@ -40,7 +40,7 @@ function renderCards(productsArray) {
 
     const price = card.querySelector('.js-product-price');
     if (price) price.textContent = `${product.price} ₽`;
-    
+
     container.appendChild(card);
   });
 }
