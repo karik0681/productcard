@@ -8,7 +8,7 @@ const productDescriptions = products.reduce((acc, product) => {
 
 // 2. Функция получения числа карточек от пользователя с валидацией
 function getCardCount() {
-  const input = prompt('Сколько карточек нужно отобразить? (от 1 до 5)');
+  const input = prompt(`Сколько карточек нужно отобразить? (от 1 до ${products.length})`);
   const cardCount = parseInt(input);
 
   if (isNaN(cardCount) || cardCount < 1 || cardCount > products.length) {
