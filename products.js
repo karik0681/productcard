@@ -46,7 +46,7 @@ export const products = [
     image: "gift-set-1"
   },
   {
-    id:5,
+    id: 5,
     name: "Подарочный набор №5",
     category: "для нормальной кожи",
     description: "Весь набор средств Invisible symphony: крем, маска, мусс и гель для умывания.",
