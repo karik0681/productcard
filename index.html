@@ -1,49 +1,122 @@
 <!DOCTYPE html>
-<html lang="en">
+< lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Product Card</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <title>Product Card</title>
+    </head>
 
-<body>
-    <div class="background"></div>
-    <h1 class="page-title">Выбери свой продукт</h1>
-    <div class="container-button">
-        <button id="change-color-first-card" class="button-design">Сменить цвет первой карточки</button>
-        <button id="change-color-all-card" class="button-design">Сменить цвет всех карточек</button>
-        <button id="open-google" class="button-design">Открыть страницу Google.com</button>
-        <button id="output-console-log" class="button-design">Вывести сообщение в консоль лог</button>
-        <button id="change-color-button" class="bg-green bg-yellow">Сменить цвет кнопки при нажатии</button>
-    </div>
+    <body>
+        <div class="background"></div>
+        <h1 class="page-title">Выбери свой продукт</h1>
+        <div class="container-button">
+            <button id="change-color-first-card" class="button-design">Сменить цвет первой карточки</button>
+            <button id="change-color-all-card" class="button-design">Сменить цвет всех карточек</button>
+            <button id="open-google" class="button-design">Открыть страницу Google.com</button>
+            <button id="output-console-log" class="button-design">Вывести сообщение в консоль лог</button>
+            <button id="change-color-button" class="bg-green bg-yellow">Сменить цвет кнопки при нажатии</button>
+        </div>
 
-    <ul class="product-cards-container"></ul>
-    <template id="card-template">
-        <li class="card-container">
-            <img src="" alt="" class="js-product-img">
-            <span class="product-category js-product-category"></span>
-            <h3 class="product-name js-product-name"></h3>
-            <p class="product-desciption js-product-description"></p>
-            <span>Состав: </span>
-            <ul class="product-compounds js-product-compounds">
-            </ul>
-            <div class="product-price-container">
-                <span class="product-price-label">Цена:</span>
-                <span class="product-price js-product-price"></span>
-            </div>
-        </li>
-    </template>
-    <script src="main.js"></script>
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script type="module" src="homework-7.js"></script>
-    <script type="module" src="homework-8.js"></script>
-</body>
+        <ul class="product-cards-container"></ul>
+        <template id="card-template">
+            <li class="card-container">
+                <img src="" alt="" class="js-product-img">
+                <span class="product-category js-product-category"></span>
+                <h3 class="product-name js-product-name"></h3>
+                <p class="product-desciption js-product-description"></p>
+                <span>Состав: </span>
+                <ul class="product-compounds js-product-compounds">
+                </ul>
+                <div class="product-price-container">
+                    <span class="product-price-label">Цена:</span>
+                    <span class="product-price js-product-price"></span>
+                </div>
+            </li>
+        </template>
 
-</html>
+        <!-- Кнопка которая открывает модалку -->
+        <button id="openBtn">Регистрация</button>
+        <div class="overlay" id="modal-overlay"></div>
+        <div class="modal" id="modal">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <h2>Регистрация</h2>
+            <form action="#" method="post" class="registration-form">
+                <label for="firstName">Имя</label>
+                <input type="text" name="firstName" placeholder="Имя" required />
+                <label for="lastName">Фамилия</label>
+                <input type="text" name="lastName" placeholder="Фамилия" required />
+                <label for="birthDate">Дата рождения</label>
+                <input type="date" name="birthDate" placeholder="Дата рождения" required />
+                <label for="login">Логин</label>
+                <input type="text" name="login" placeholder="Логин" required />
+                <label for="password">Пароль</label>
+                <input type="password" name="password" placeholder="Пароль" required />
+                <label for="passwordConfirm">Подтверждение пароля</label>
+                <input type="password" name="passwordConfirm" placeholder="Подтверждение пароля" required />
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+
+
+            <footer>
+
+                <!-- Три колонки -->
+                <div class="footer-top">
+
+                    <!-- КОЛОНКА 1: Бренд -->
+                    <section class="footer-brand">
+                        <h2>Product Cards</h2>
+                        <p>У Нас Самые Лучшие Продукты Для Кожи!</p>
+                        <div class="social-icons">
+                            <img class="tg-icon" src="images/SVG/tg-icon.svg" alt="Телеграм">
+                            <img class="vk-icon" src="images/SVG/vk-icon.svg" alt="VK">
+                        </div>
+                    </section>
+
+                    <!-- КОЛОНКА 2: Форма подписки -->
+                    <section class="footer-subscribe">
+                        <p>Подпишись на наши акции:</p>
+
+                        <!-- form — семантический тег для форм -->
+                        <form action="#" method="post" class="subscribe-form">
+
+                            <input type="email" name="email" placeholder="Введи Email..." required />
+
+                            <div class="divider"></div>
+
+                            <!-- type="submit" — кнопка отправки формы -->
+                            <button type="submit">Подписаться</button>
+
+                        </form>
+                    </section>
+
+                    <!-- КОЛОНКА 3: Навигация -->
+                    <!-- nav — семантический тег для навигационных ссылок -->
+                    <nav class="footer-nav" aria-label="Быстрые ссылки">
+                        <h3>Быстрые ссылки</h3>
+                        <ul>
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#">Магазин</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+
+                <!-- Копирайт -->
+                <div class="footer-bottom">
+                    <!-- small — семантический тег для мелкого юридического текста -->
+                    <small>www.product-cards.com &copy; All rights reserved</small>
+                </div>
+
+            </footer>
+            <script src="main.js" type="module"></script>
+    </body>
+
+    </html>

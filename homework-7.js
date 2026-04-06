@@ -61,8 +61,8 @@ console.log(emailsWithMap);
 
 // 12 - Перебрать массив с задания №11, привести его к строке. //
 
-const emailsAsString = emails.toString();
-const emailsString  = emails.join();
+const emailsAsString = emailsWithReduce.toString();
+const emailsString  = emailsWithMap.join();
 
 console.log(emailsAsString)
 console.log(emailsString)

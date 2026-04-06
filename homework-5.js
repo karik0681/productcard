@@ -37,7 +37,10 @@ PurchaseDevice(1200);
 
 
 // Длина строки
-const result = length('Hello, world!');
+function textLength(text) {
+    return text.length;
+}
+const result = textLength('Hello, world!');
 console.log(result); // Выведет: 13
 
 
