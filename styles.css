@@ -183,7 +183,6 @@ footer {
     height: 14px;
 }
 
-
 .footer-subscribe {
     flex: 1.5;
     text-align: center;
@@ -229,7 +228,6 @@ form.subscribe-form input[type="email"]::placeholder {
     background: rgba(255, 255, 255, 0.9);
 }
 
-
 form.subscribe-form button[type="submit"] {
     font-family: 'Montserrat';
     font-weight: 500;
@@ -248,7 +246,6 @@ form.subscribe-form button[type="submit"]:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-
 .footer-nav {
     padding-right: 75px;
     height: 147px;
@@ -259,7 +256,6 @@ form.subscribe-form button[type="submit"]:hover {
     margin-bottom: 12px;
     color: #ddd;
 }
-
 
 .footer-nav ul {
     list-style: none;
@@ -280,14 +276,11 @@ form.subscribe-form button[type="submit"]:hover {
     color: white;
 }
 
-
 .footer-bottom {
     width: 100%;
     margin-top: 40px;
     text-align: center;
 }
-
-
 
 .footer-bottom small {
     display: block;
@@ -310,7 +303,6 @@ form.subscribe-form button[type="submit"]:hover {
     height: 1px;
     background-color: white;
 }
-
 
 .overlay {
     position: fixed;
