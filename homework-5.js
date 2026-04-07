@@ -20,13 +20,13 @@ checkSpeedOfLight(299792458);
 checkSpeedOfLight(250000000);
 
 // Бюджет на покупку техники
-const product  = 'ноутбук';
+const product = 'ноутбук';
 const devicePrice = 1200;
 function PurchaseDevice(budget) {
 
     if (budget >= devicePrice) {
         console.log(`Ваш ${product} куплен.  Спасибо за покупку!`);
-    } else{
+    } else {
         const difference = devicePrice - budget;
         console.log(`Вам не хватает ${difference} долларов.`);
 
@@ -37,10 +37,10 @@ PurchaseDevice(1200);
 
 
 // Длина строки
-function textLength(text) {
+function getTextLength(text) {
     return text.length;
 }
-const result = textLength('Hello, world!');
+const result = getTextLength('Hello, world!');
 console.log(result); // Выведет: 13
 
 

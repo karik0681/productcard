@@ -1,6 +1,3 @@
-let user;
-
-
 const subscribeForm = document.querySelector('.subscribe-form');
 subscribeForm.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -26,6 +23,8 @@ closeBtn.addEventListener('click', () => {
   overlay.classList.remove('overlay-showed');
   modal.classList.remove('modal-showed');
 });
+
+let user;
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();

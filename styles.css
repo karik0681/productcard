@@ -171,7 +171,7 @@ footer {
 }
 
 .tg-icon {
-   margin-top: 10px;
+    margin-top: 10px;
     width: 21px;
     height: 17px;
     margin-right: 30.5px;
@@ -186,7 +186,6 @@ footer {
 
 .footer-subscribe {
     flex: 1.5;
-    /* эта колонка немного шире остальных */
     text-align: center;
 }
 
@@ -199,7 +198,6 @@ footer {
     color: #FFFFFF
 }
 
-/* Сама форма — инпут и кнопка в одной строке */
 form.subscribe-form {
     display: flex;
     width: 477px;
@@ -207,7 +205,6 @@ form.subscribe-form {
     background: white;
     border-radius: 10px;
     align-items: center;
-    /* скрываем углы дочерних элементов */
 }
 
 form.subscribe-form input[type="email"] {
@@ -224,7 +221,6 @@ form.subscribe-form input[type="email"] {
     background: transparent;
     color: #000000BF;
     outline: none;
-    /* убираем синюю рамку при фокусе */
 }
 
 form.subscribe-form input[type="email"]::placeholder {
@@ -233,10 +229,8 @@ form.subscribe-form input[type="email"]::placeholder {
     background: rgba(255, 255, 255, 0.9);
 }
 
-/* Тонкая линия-разделитель между инпутом и кнопкой */
 
 form.subscribe-form button[type="submit"] {
-
     font-family: 'Montserrat';
     font-weight: 500;
     font-size: 18px;
@@ -254,9 +248,7 @@ form.subscribe-form button[type="submit"]:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* =============================
-       КОЛОНКА 3 — Навигация (nav)
-       ============================= */
+
 .footer-nav {
     padding-right: 75px;
     height: 147px;
@@ -268,7 +260,7 @@ form.subscribe-form button[type="submit"]:hover {
     color: #ddd;
 }
 
-/* Убираем стандартные точки у списка */
+
 .footer-nav ul {
     list-style: none;
 }
@@ -288,50 +280,35 @@ form.subscribe-form button[type="submit"]:hover {
     color: white;
 }
 
-/* =============================
-       FOOTER-BOTTOM — копирайт
-       ============================= */
+
 .footer-bottom {
     width: 100%;
     margin-top: 40px;
     text-align: center;
-    /* горизонтальная линия-разделитель */
 }
 
 
 
 .footer-bottom small {
-    /* Чтобы текст вел себя как отдельный блок */
     display: block;
     position: relative;
-    /* Нужно для позиционирования линии */
     padding-top: 20px;
-    /* Расстояние от текста до линии */
-
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 14px;
-    /* Рекомендую чуть уменьшить для эстетики */
     color: #FFFFFF;
 }
 
 .footer-bottom small::before {
     content: "";
-    /* Обязательно для работы псевдоэлемента */
     position: absolute;
     top: 0;
-    /* Линия в самом верху элемента small */
     left: 50%;
-    /* Ставим начало линии по центру */
     transform: translateX(-50%);
-    /* Сдвигаем назад на половину её длины для идеального центра */
 
     width: 66px;
-    /* Ваша желаемая ширина линии */
     height: 1px;
-    /* Толщина линии */
     background-color: white;
-    /* Цвет линии */
 }
 
 
@@ -375,4 +352,3 @@ form.subscribe-form button[type="submit"]:hover {
     flex-direction: column;
     gap: 15px;
 }
-
