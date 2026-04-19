@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <title>Product Card</title>
 </head>
@@ -39,11 +38,65 @@
             </div>
         </li>
     </template>
-    <script src="main.js"></script>
-    <script src="homework-5.js"></script>
-    <script src="homework-6.js"></script>
-    <script type="module" src="homework-7.js"></script>
-    <script type="module" src="homework-8.js"></script>
+
+    <button id="openBtn">Регистрация</button>
+    <div class="overlay" id="modal-overlay"></div>
+    <div class="modal" id="modal">
+        <button class="close-btn" id="closeBtn">&times;</button>
+        <h2>Регистрация</h2>
+        <form action="#" method="post" class="registration-form">
+            <label for="firstName">Имя</label>
+            <input type="text" name="firstName" placeholder="Имя" required />
+            <label for="lastName">Фамилия</label>
+            <input type="text" name="lastName" placeholder="Фамилия" required />
+            <label for="birthDate">Дата рождения</label>
+            <input type="date" name="birthDate" placeholder="Дата рождения" required />
+            <label for="login">Логин</label>
+            <input type="text" name="login" placeholder="Логин" required />
+            <label for="password">Пароль</label>
+            <input type="password" name="password" placeholder="Пароль" required />
+            <label for="passwordConfirm">Подтверждение пароля</label>
+            <input type="password" name="passwordConfirm" placeholder="Подтверждение пароля" required />
+            <button type="submit">Зарегистрироваться</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <section class="footer-brand">
+                <h2>Product Cards</h2>
+                <p>У Нас Самые Лучшие Продукты Для Кожи!</p>
+                <div class="social-icons">
+                    <img class="tg-icon" src="images/svg/tg-icon.svg" alt="Телеграм">
+                    <img class="vk-icon" src="images/svg/vk-icon.svg" alt="VK">
+                </div>
+            </section>
+
+            <section class="footer-subscribe">
+                <p>Подпишись на наши акции:</p>
+                <form action="#" method="post" class="subscribe-form">
+                    <input type="email" name="email" placeholder="Введи Email..." required />
+                    <div class="divider"></div>
+                    <button type="submit">Подписаться</button>
+                </form>
+
+            </section>
+            <nav class="footer-nav" aria-label="Быстрые ссылки">
+                <h3>Быстрые ссылки</h3>
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">Магазин</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer-bottom">
+            <small>www.product-cards.com &copy; All rights reserved</small>
+        </div>
+
+    </footer>
+    <script src="main.js" type="module"></script>
 </body>
 
 </html>
