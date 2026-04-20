@@ -2,12 +2,12 @@ class Modal {
     constructor(id) {
         this.modal = document.getElementById(id);
         this.overlay = document.querySelector('.overlay');
-        this.listenClose();
     }
 
     open() {
         this.overlay.classList.add('overlay-showed');
         this.modal.classList.add('modal-showed');
+        this.listenClose();
     }
 
     close() {

@@ -1,12 +1,14 @@
-import { Modal } from './modal.js';
-import { Form } from './form.js';
+// homework-9.js
+import { Modal } from './Modal.js';
+import { Form } from './Form.js';
 
 const modal = new Modal('modal');
 const form = new Form('registration-form');
 const subscribeForm = new Form('subscribe-form');
 
 // открытие
-document.getElementById('openBtn').addEventListener('click', () => {
+const openBtn = document.getElementById('openBtn');
+openBtn.addEventListener('click', () => {
     modal.open();
 });
 

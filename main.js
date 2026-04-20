@@ -4,7 +4,11 @@ import './homework-7.js';
 import './homework-8.js';
 import './homework-9.js';
 import './products.js';
-import { Sedan, Cabriolet, Truck } from './vehicles.js';
+import Truck from './Truck.js';
+import Sedan from './Sedan.js';
+import Cabriolet from './Cabriolet.js';
+
+
 
 const sedan1 = new Sedan('BMW', 120, 4, 500);
 const cab1 = new Cabriolet('Mercedes', 150, 2, false);
@@ -65,13 +69,13 @@ function outputConsoleLog(message) {
 const changeColorButton = document.querySelector('#change-color-button')
 
 changeColorButton.addEventListener('click', () => {
-    changeColorButton.classList.toggle('bg-green')
-    changeColorButton.classList.toggle('bg-yellow')
+  changeColorButton.classList.toggle('bg-green')
+  changeColorButton.classList.toggle('bg-yellow')
 })
 
 // Наведение на заголовок //
 
 const pageTitle = document.querySelector('.page-title')
-pageTitle.addEventListener('mouseover' , () => {
+pageTitle.addEventListener('mouseover', () => {
   console.log(pageTitle.textContent)
 })
