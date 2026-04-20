@@ -1,54 +1,43 @@
-const subscribeForm = document.querySelector('.subscribe-form');
-subscribeForm.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const formData = new FormData(subscribeForm);
-  const data = Object.fromEntries(formData.entries());
-  console.log(data);
+import { Modal } from './modal.js';
+import { Form } from './form.js';
+
+const modal = new Modal('modal');
+const form = new Form('registration-form');
+const subscribeForm = new Form('subscribe-form');
+
+// открытие
+document.getElementById('openBtn').addEventListener('click', () => {
+    modal.open();
 });
 
-
-const openBtn = document.getElementById('openBtn');
-const closeBtn = document.getElementById('closeBtn');
-const overlay = document.querySelector('.overlay');
-const modal = document.querySelector('.modal');
-const form = document.querySelector('.registration-form');
-
-
-openBtn.addEventListener('click', () => {
-  overlay.classList.add('overlay-showed');
-  modal.classList.add('modal-showed');
+// подписка
+subscribeForm.form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    console.log(subscribeForm.getValues());
 });
 
-closeBtn.addEventListener('click', () => {
-  overlay.classList.remove('overlay-showed');
-  modal.classList.remove('modal-showed');
-});
-
+// регистрация
 let user;
+form.form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
-form.addEventListener('submit', (event) => {
-  event.preventDefault();
-  const password = form.elements.password.value;
-  const passwordConfirm = form.elements.passwordConfirm.value;
+    if (!form.isValid()) {
+        alert('Пожалуйста, заполните все поля корректно!');
+        return;
+    }
 
-  if (!form.checkValidity()) {
-    alert('Пожалуйста, заполните все поля корректно!');
-    return;
-  }
+    const data = form.getValues();
 
-  if (password !== passwordConfirm) {
-    alert('Пароли не совпадают!');
-    return;
-  }
+    if (data.password !== data.passwordConfirm) {
+        alert('Пароли не совпадают!');
+        return;
+    }
 
-  const formData = new FormData(form);
-  const userData = Object.fromEntries(formData.entries());
-  delete userData.passwordConfirm;
-  userData.createdOn = new Date();
-  user = userData;
+    delete data.passwordConfirm;
+    data.createdOn = new Date();
+    user = data;
 
-  console.log(user);
-
-  modal.classList.remove('modal-showed');
-  overlay.classList.remove('overlay-showed');
+    console.log(user);
+    modal.close();
+    form.reset();
 });
