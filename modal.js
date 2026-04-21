@@ -7,7 +7,7 @@ class Modal {
     open() {
         this.overlay.classList.add('overlay-showed');
         this.modal.classList.add('modal-showed');
-        this.listenClose();
+        this.initClose();
     }
 
     close() {
@@ -19,11 +19,9 @@ class Modal {
         return this.modal.classList.contains('modal-showed');
     }
 
-    listenClose() {
+    initClose() {
         const closeBtn = this.modal.querySelector('.close-btn');
-        closeBtn.addEventListener('click', () =>
-            this.close());
-
+        closeBtn.addEventListener('click', () => this.close());
     }
 }
 
