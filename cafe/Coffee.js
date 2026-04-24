@@ -5,6 +5,8 @@ class Coffee extends Drink {
         super(name, size, price);
         this.beanType = beanType;
         this.milkType = milkType;
+        this.setTemperature(90);
+
     }
 
     getInfo() {

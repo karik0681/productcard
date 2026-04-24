@@ -4,6 +4,8 @@ class Tea extends Drink {
     constructor(name, size, price, teaType) {
         super(name, size, price);
         this.teaType = teaType;
+        this.setTemperature(80);
+
     }
 
     getInfo() {

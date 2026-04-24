@@ -27,7 +27,6 @@ class Drink {
 
     #prepare() {
         console.log(`Приготовление напитка ${this.name}...`);
-        this.setTemperature(75);
     }
 
     serve() {
